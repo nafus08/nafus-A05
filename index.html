@@ -87,6 +87,8 @@
     <script>
       (function () {
         const preloader = document.getElementById('preloader');
+        const startedAt = performance.now();
+        const minimumDuration = 2800;
         const hidePreloader = function () {
           document.body.classList.add('app-ready');
           setTimeout(function () {
@@ -95,10 +97,11 @@
         };
 
         window.addEventListener('load', function () {
-          setTimeout(hidePreloader, 1200);
+          const remainingTime = Math.max(0, minimumDuration - (performance.now() - startedAt));
+          setTimeout(hidePreloader, remainingTime);
         });
 
-        setTimeout(hidePreloader, 4200);
+        setTimeout(hidePreloader, 6000);
       })();
     </script>
     <script type="module" src="/src/main.jsx"></script>
