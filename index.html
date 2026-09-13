@@ -96,12 +96,12 @@
           }, 300);
         };
 
-        window.addEventListener('load', function () {
+        window.addEventListener('app-ready', function () {
           const remainingTime = Math.max(0, minimumDuration - (performance.now() - startedAt));
           setTimeout(hidePreloader, remainingTime);
         });
 
-        setTimeout(hidePreloader, 6000);
+        setTimeout(hidePreloader, 8000);
       })();
     </script>
     <script type="module" src="/src/main.jsx"></script>

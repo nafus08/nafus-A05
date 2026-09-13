@@ -51,6 +51,7 @@ function App() {
     const timer = setTimeout(() => {
       setItems(technologies);
       setLoading(false);
+      window.dispatchEvent(new Event('app-ready'));
     }, 4000);
     return () => clearTimeout(timer);
   }, []);
