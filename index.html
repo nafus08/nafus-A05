@@ -7,7 +7,32 @@
     <title>Dev Stack | Build your toolkit</title>
   </head>
   <body>
+    <div id="preloader" class="loader-screen" aria-live="polite" aria-busy="true">
+      <div class="loader-orbit">
+        <div class="loader-core"></div>
+        <div class="loader-ring ring-one"></div>
+        <div class="loader-ring ring-two"></div>
+      </div>
+      <p>Loading your toolkit...</p>
+    </div>
     <div id="root"></div>
+    <script>
+      (function () {
+        const preloader = document.getElementById('preloader');
+        const hidePreloader = function () {
+          document.body.classList.add('app-ready');
+          setTimeout(function () {
+            if (preloader) preloader.remove();
+          }, 300);
+        };
+
+        window.addEventListener('load', function () {
+          setTimeout(hidePreloader, 1200);
+        });
+
+        setTimeout(hidePreloader, 4200);
+      })();
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
