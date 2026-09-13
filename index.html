@@ -58,6 +58,10 @@
         visibility: hidden;
         pointer-events: none;
       }
+      body:not(.app-ready) #preloader {
+        opacity: 1 !important;
+        animation: none !important;
+      }
       @keyframes spin { to { transform: rotate(360deg); } }
       @keyframes spinReverse { to { transform: scale(0.82) rotate(-360deg); } }
       @keyframes loaderPulse {
