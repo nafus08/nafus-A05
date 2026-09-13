@@ -32,18 +32,6 @@
         place-items: center;
         animation: loaderPulse 2.2s ease-in-out infinite;
       }
-      #preloader .loader-orbit::before {
-        content: '';
-        position: absolute;
-        width: 12px;
-        height: 12px;
-        top: 4px;
-        left: 84px;
-        border-radius: 50%;
-        background: #000000;
-        box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.08), 0 0 18px rgba(0, 0, 0, 0.35);
-        animation: loaderOrbitDot 1.4s linear infinite;
-      }
       #preloader .loader-ring {
         position: absolute;
         inset: 0;
@@ -83,9 +71,6 @@
       @keyframes loaderCorePulse {
         from { transform: scale(0.82); }
         to { transform: scale(1.15); }
-      }
-      @keyframes loaderOrbitDot {
-        to { transform: rotate(360deg) translateY(86px) rotate(-360deg); }
       }
       @keyframes loaderFade {
         from { opacity: 0.86; }
