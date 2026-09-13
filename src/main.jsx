@@ -51,7 +51,7 @@ function App() {
     const timer = setTimeout(() => {
       setItems(technologies);
       setLoading(false);
-    }, 1400);
+    }, 4000);
     return () => clearTimeout(timer);
   }, []);
   const filteredItems = items.filter(item => (category === 'All' || item.category === category) && `${item.name} ${item.description}`.toLowerCase().includes(query.toLowerCase()));
