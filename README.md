@@ -2,6 +2,10 @@
 
 Dev Stack Builder is a React app for exploring a curated catalog of developer technologies and assembling a personal toolkit.
 
+## Live site
+
+[Open Dev Stack Builder](https://nafus-a05.vercel.app)
+
 ## Tech stack
 
 - React
